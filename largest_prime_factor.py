@@ -11,7 +11,8 @@ def prime(n):
         if n % a == 0:
             n = n / a
             listing.append(a)
-        a = a + 1
+        else:
+            a = a + 1
     return n
 prime(600851475143)
 print(list(dict.fromkeys(listing))[len(listing)-1])
