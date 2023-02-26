@@ -4,13 +4,13 @@
 import time
 st = time.time()
 
-n = 20
+n = 2520
 while n > 0:
-    if n % 20 == 0 and n % 19 == 0 and n % 18 == 0 and n % 17 == 0 and n % 16 == 0 and n % 15 == 0 and n % 14 == 0  and n % 13 == 0 and n % 12 == 0 and n % 11 == 0:
+    if all(n % i == 0 for i in range(11, 21)):
         print(n)
         break
     else:
-        n = n + 20
+        n += 2520
 
 et = time.time()
 print('Execution time:', float("{:.8f}".format(float(et - st))),'seconds')
