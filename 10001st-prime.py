@@ -6,9 +6,10 @@ st = time.time()
 
 a = 2
 n = 3
-listing = []
+listing = [2]
+
 while len(listing) <= 10000:
-    if all(n % a != 0 for a in range (a, n)):
+    if all(n % a != 0 for a in range (a, int(n**0.5+1))): # actor of n that is greater than the square root of n must also have a corresponding factor that is less than the square root of n. 
         listing.append(n)
     n = n + 2
        
